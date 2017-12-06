@@ -29,8 +29,8 @@ Rob is awesome!  Tell your friends.
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.js"></script>
 <script>
-  angular.module("myApp", []).controller("myCtrl", function ($scope) {
-    $scope.answer = function(){
+  angular.module("myApp", []).controller("myCtrl", hobbyFunction ($scope) {
+    $scope.answer = hobbyFunction(){
       if($scope.hobby == 'camping'){
         $scope.message = "That is correct!"
       }
