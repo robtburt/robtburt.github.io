@@ -35,7 +35,7 @@ Rob is awesome!  Tell your friends.
         $scope.message = "That is correct!"
       }
       else if($scope != 'camping'){
-          $scope.message = "That is not correct!  Try again"
+          $scope.response = "That is not correct!  Try again"
       }
     }
   });
@@ -43,7 +43,7 @@ Rob is awesome!  Tell your friends.
 <form ng-app="myApp" ng-controller="myCtrl">
 <label>What is your favourite activity: </label><input ng-model="hobby" />
 <button ng-click="answer()">Submit answer</button>
-<p>{{message}}</p>
+<p>{{response}}</p>
 </form>
   
 </body>
