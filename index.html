@@ -6,7 +6,7 @@ Rob is awesome!  Tell your friends.
     document.write('Rob'<br/>);
   </script>
   </h1>
-</body>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.js"></script>
 <script>
@@ -30,7 +30,7 @@ Rob is awesome!  Tell your friends.
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.js"></script>
 <script>
   angular.module("myApp", []).controller("myCtrl", function ($scope) {
-    $scope.calculate = function(){
+    $scope.answer = function(){
       if($scope.hobby == 'camping'){
         $scope.message = "That is correct!"
       }
@@ -42,7 +42,9 @@ Rob is awesome!  Tell your friends.
 </script>
 <form ng-app="myApp" ng-controller="myCtrl">
 <label>What is your favourite activity: </label><input ng-model="hobby" />
-<button ng-click="calculate()">Submit answer</button>
+<button ng-click="answer()">Submit answer</button>
 <p>{{message}}</p>
 </form>
+  
+</body>
   
