@@ -12,11 +12,11 @@ Rob is awesome!  Tell your friends.
 <script>
   angular.module("myApp", []).controller("myCtrl", function ($scope) {
     $scope.calculate = function(){
-      if($scope.score >= 55){
-        $scope.message = "You have passed!"
+      if($scope.name == 'Cynthia'){
+        $scope.message = "That is correct!"
       }
-      else if($scope >= 90){
-          $scope.message = "You did great!"
+      else if($scope != 'Cynthia'){
+          $scope.message = "That is not correct!"
       }
       else{
         $scope.message = "You have failed";
@@ -25,7 +25,7 @@ Rob is awesome!  Tell your friends.
   });
 </script>
 <form ng-app="myApp" ng-controller="myCtrl">
-<label>Input test score</label><input ng-model="score" />
+<label>Please enter your name: </label><input ng-model="name" />
 <button ng-click="calculate()">How did you do?</button>
 <p>{{message}}</p>
 </form>
