@@ -15,10 +15,7 @@ All about you
     $scope.calculate = function(){
       if($scope.name == 'Cynthia'){
         $scope.message = "That is correct!"
-       
       }
-    
-      
       else if($scope != 'Cynthia'){
           $scope.message = "That is not correct!  Try again"
       }
@@ -36,7 +33,7 @@ All about you
 <p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.js"></script>
 <script>
-  angular.module("myHobby", []).control("myCtrls", hobbyFunction ($scope) {
+  angular.module("myHobby", []).controller("myCtrls", hobbyFunction ($scope) {
     $scope.answer = hobbyFunction(){
       if($scope.hobby == 'camping'){
         $scope.message = "That is correct!"
@@ -47,7 +44,7 @@ All about you
     }
   });
 </script>
-<form ng-app="myHobby" ng-control="myCtrls">
+<form ng-app="myHobby" ng-controller="myCtrls">
 <label>What is your favourite activity: </label><input ng-model="hobby" />
 <button ng-click="answer()">Submit answer</button>
 <p>{{message}}</p>
