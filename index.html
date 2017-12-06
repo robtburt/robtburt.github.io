@@ -20,19 +20,19 @@ All about you
         angular.module("myHobby", []).control("myCtrls", hobbyFunction ($scope) {
         $scope.answer = hobbyFunction(){
         if($scope.hobby == 'camping'){
-          $scope.response = "That is correct!"
+          $scope.message = "That is correct!"
         }
         else if($scope != 'camping'){
-          $scope.response = "That is not correct!  Try again"
+          $scope.message = "That is not correct!  Try again"
         }
       }
     });
-</script>
-<form ng-app="myHobby" ng-control="myCtrls">
-<label>What is your favourite activity: </label><input ng-model="hobby" />
-<button ng-click="answer()">Submit answer</button>
-<p>{{response}}</p>
-</form>
+  </script>
+  <form ng-app="myHobby" ng-control="myCtrls">
+  <label>What is your favourite activity: </label><input ng-model="hobby" />
+  <button ng-click="answer()">Submit answer</button>
+  <p>{{message}}</p>
+  </form>
       }
       else if($scope != 'Cynthia'){
           $scope.message = "That is not correct!  Try again"
@@ -54,10 +54,10 @@ All about you
   angular.module("myHobby", []).control("myCtrls", hobbyFunction ($scope) {
     $scope.answer = hobbyFunction(){
       if($scope.hobby == 'camping'){
-        $scope.response = "That is correct!"
+        $scope.message = "That is correct!"
       }
       else if(//$scope != 'camping'//){
-          $scope.response = "That is not correct!  Try again"
+          $scope.message = "That is not correct!  Try again"
       }
     }
   });
@@ -65,7 +65,7 @@ All about you
 <form ng-app="myHobby" ng-control="myCtrls">
 <label>What is your favourite activity: </label><input ng-model="hobby" />
 <button ng-click="answer()">Submit answer</button>
-<p>{{response}}</p>
+<p>{{message}}</p>
 </form>
 </p>
   
