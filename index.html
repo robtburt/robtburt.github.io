@@ -27,17 +27,17 @@ All about you
 <script>
   angular.module("myApp", []).controller("myCtrl", function ($scope) {
     $scope.calculate = function(){
-      if($scope.name == 'Cynthia'){
+      if($scope.hobby == 'Cynthia'){
         $scope.message = "That is correct!"
       }
-      else if($scope != 'Cynthia'){
+      else if(){
           $scope.message = "That is not correct!  Try again"
       }
     }
   });
 </script>
 <form ng-app="myApp" ng-controller="myCtrl">
-<label>Please enter your name: </label><input ng-model="name" />
+<label>Please enter your name: </label><input ng-model="hobby" />
 <button ng-click="calculate()">Submit answer</button>
 <p>{{message}}</p>
 </form>
